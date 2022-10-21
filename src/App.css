@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500&display=swap');
+
+:root {
+  --main-bg-color: #ececec;
+  --logo-bg-color: #c3c2b8cd;
+  --text-color: #464646;
+}
+
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: 'Barlow', sans-serif;
+  color: var(--text-color);
+  background-color: white;
+}
+
+body::-webkit-scrollbar {
+  /* -webkit-appearance: none; */
+  width: 5px;
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c3c2b8cd;
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
+
+.main_container {
+  /* min-height: 100%; */
+  height: 100%;
+  padding: 3%;
+}
+/* logo */
+.logo {
+  position: absolute;
+  top: 0px;
+  transform: translate(-25%, -25%);
+  background-color: var(--logo-bg-color);
+  padding: 1%;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  color: var(--text-color);
+  text-decoration: none;
+
+}
+.text_logo {
+  font-size: 50px;
+  font-weight: 400;
+}
+/* navbar */
+.navbar {
+  position: absolute;
+  top: 0px;
+  right: 8%;
+  display: flex;
+  /* width: 400px; */
+  justify-content: space-between;
+}
+.navbar_item {
+  margin-left: 50px;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 200;
+  transform: translate(0, -50%);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+.navbar_item p {
+  text-decoration: none;
+}
+
+.navbar_item:focus:active, .navbar_item:focus:link {
+  color: var(--text-color);
+
+
+} 
+
+.navbar_item:focus {
+  color: var(--text-color);
+
+} 
+
+.navbar_item:visited {
+  color: var(--text-color);
+
+} 
+
+.navbar_item_decoration {
+  width: 2px;
+  height: 28px;
+  background-color: #9B8A70;
+  display: none;
+}
+
+.trabajos_icon {
+  height: 50px;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/*  informacion */
+.container_columns {
+  
+  
+  height: 100%;
+  background-color: var(--main-bg-color);
+  position: relative;
+  
+  
+}
+
+/* encatada */
+.container_encantada {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5%;
+}
+
+.encantada {
+  font-size: 25px;
+  width: 210px;
+  font-weight: 400;
+  
+}
+.encantada_decoration {
+  width: 25px;
+  height: 4px;
+  background-color: var(--text-color);
+
+}
+
+/* nombre */
+.container_nopmbre_completo {
+  margin-top: -10px;
+  font-size: 70px;
+  position: relative;
+  
+}
+.nombre {
+  font-weight: 200;
+}
+.apellido {
+  font-weight: 200;
+  margin-left: 23%;
+}
+/* 
+.nombre_completo_decoration1 {
+  width: 5px;
+  height: 66%;
+  position: absolute;
+  background-color: #9b8a707c;
+  bottom: 0;
+  margin-left: 15px;
+
+} */
+
+/* work */
+.profesion {
+  font-size: 44px;
+  font-weight: 200;
+
+  margin-left: 24%;
+}
+
+
+/* descripcion */
+
+.container_description {
+  margin-top: 40px;
+  margin-left: 27%;
+  width: 56%;
+
+  display: flex;
+  position: relative;
+}
+
+.description_decoration {
+  height: 120%;
+  width: 4px;
+  margin-left: -25px;
+  margin-top: -10px;
+
+  position: absolute;
+  background-color: #c8c6b17f;
+}
+
+.description {
+  font-size: 22px;
+}
+
+/*  foto Maryell */
+.container_columns2 { 
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 4%;
+  justify-content: space-between;
+}
+
+.container_photo { 
+  height: 100%;
+}
+
+.photo {
+  margin-top: 13%;
+  filter: grayscale(1);
+  height: 87%;
+  
+}
+
+
+/* redes sociales */
+.container_redes_sociales {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  gap: 30px;
+  transform: translate(0,50%);
+  margin-left: 6%;
+}
+
+.link_redes_sociales {
+  text-decoration: none;
+  color: #9B8A70;
+}
+.img_red_social {
+  height: 35px;
+
+}
+
+.photo-mobile{
+  height: 20%;
+  display: none;
+  filter: grayscale(1);
+
+}
+
+@media (max-height: 885px)  and (orientation: landscape) {
+  .photo {
+    margin-top: 22%;
+    height: 70%;
+  }
+
+  /* nombre */
+  .container_nopmbre_completo {
+    font-size: 55px;    
+  }
+
+  /* work */
+  .profesion {
+    font-size: 35px;
+  }
+
+  /* description */
+  .description {
+    font-size: 18px;
+  }
+
+  /* encantada */
+
+  .container_encantada {
+
+    margin-top: 6%;
+  }
+  .encantada {
+    font-size: 22px;
+  }
+
+  .encantada_decoration {
+    width: 22px;
+    height: 4px;
+    background-color: var(--text-color);
+
+  }
+
+  .main_container {
+    height: 100%;
+    padding: 5%;
+  }
+
+}
+
+@media (max-width: 1570px) and (orientation: landscape){
+  .photo {
+    margin-top: 22%;
+    height: 70%;
+  }
+
+  /* nombre */
+  .container_nopmbre_completo {
+    font-size: 55px;    
+  }
+
+  /* work */
+  .profesion {
+    font-size: 35px;
+  }
+
+  /* description */
+  .description {
+    font-size: 18px;
+  }
+
+  /* encantada */
+
+  .container_encantada {
+
+    margin-top: 6%;
+  }
+  .encantada {
+    font-size: 22px;
+  }
+
+  .encantada_decoration {
+    width: 22px;
+    height: 4px;
+    background-color: var(--text-color);
+
+  }
+
+  .main_container {
+    height: 100%;
+    padding: 5%;
+  }
+
+}
+
+
+@media (max-width: 1310px) and (orientation: landscape) {
+
+  .apellido {
+    font-weight: 200;
+    margin-left: 0px;
+  }
+
+  .profesion {
+
+    margin-left: 10px;
+  }
+
+  .container_description {
+    margin-top: 40px;
+    margin-left: 45px;
+    width: 80%;
+  
+    display: flex;
+    position: relative;
+  }
+
+  .container_encantada {
+
+    margin-top:20%;
+  }
+
+  .main_container {
+    height: 100%;
+    padding: 7%;
+  }
+
+}
+
+@media (max-width: 1310px) and (orientation: landscape) and (max-height: 885px) {
+
+  .container_encantada {
+
+    margin-top:10%;
+  }
+
+
+}
+
+@media (max-width: 1310px) and (orientation:portrait) {
+
+  .main_container {
+    /* min-height: 100%; */
+    height: 100%;
+    padding: 3%;
+  }
+  .main_container {
+    min-height: 100%;
+    height: 100%;
+    padding: 10%;
+  }
+  .container_columns {
+    height: auto;
+    min-height: 100%;
+  }
+
+  .container_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* nav */
+  .navbar_item {
+    font-size: 20px;
+    display: none;
+  }
+
+  .container_nopmbre_completo {
+    font-size: 23px;
+    width: 260px;
+    margin-top: 0px;
+
+  }
+
+  .nombre {
+    font-weight: 200;
+  }
+  .apellido {
+    font-weight: 200;
+    text-align: end;
+  }
+
+
+  .profesion {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: end;
+    width: 260px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-weight: 400;
+    font-size: 17px;
+  }
+  .container_description {
+    margin-top: 40px;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100%;
+    padding: 7%;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+  }
+
+  /* logo */
+  .logo {
+
+    height: 50px;
+    width: 50px;
+
+  }
+  .text_logo {
+    font-size: 30px;
+    font-weight: 400;
+  }
+    
+  .photo-mobile{
+    height: 220px;
+    /* width: 10%; */
+
+    
+    display: flex;
+  }
+
+  .container_photo {
+    display: none;
+    height: 0;         
+  }
+
+  .description_decoration {
+    display: none;
+  }
+
+  
+  /* encatada */
+  .container_encantada {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5%;
+    margin-bottom: 20px;
+  }
+
+  .encantada {
+    font-size: 17px;
+    text-align: center;
+    width: 160px;
+    font-weight: 500;
+    
+  }
+  .encantada_decoration {
+    width: 20px;
+    height: 3px;
+    
+
+  }
+
+  .encantada_decoration2 {
+    width: 20px;
+    height: 3px;
+    
+    background-color: var(--text-color);
+
+  }
+
+  .container_redes_sociales {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    transform: translate(0,50%);
+    margin-left: 0px;
+  }
+  .navbar {
+    right: 0;
+    transform: translate(3px, -5px);
+  }
+  .trabajos_icon {
+    display: block;
+    height: 40px;
+
+  }
+}
